@@ -100,10 +100,14 @@ After the maximum number of iterations (30) the model was 99% accurate.  See bel
 
 * --------------------------------------------------
 * And here is it's accuracy: 
-![hyperdrive_accuracy](./screenshots/hyperdrive_accuracy.png)
+* ![hyperdrive_accuracy](./screenshots/hyperdrive_accuracy.png)
+* --------------------------------------------------
+* --------------------------------------------------
 * --------------------------------------------------
 * Here are the run details for the hyperdrive run:
-![hyperdrive_run_details](./screenshots/hyperdrive_run_details.png)
+* ![hyperdrive_run_details](./screenshots/hyperdrive_run_details.png)
+* Here is the run widget for the hyperdrive run:
+* ![hyperdrive_run_widget](./screenshots/hyperdrive_runwidget.png)
 * --------------------------------------------------
 ## Improvements
 
