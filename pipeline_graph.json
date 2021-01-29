@@ -1,0 +1,158 @@
+{
+    "schema_name": "pipeline_graph",
+    "schema_version": "1.0.0",
+    "data": {
+        "module_nodes": {
+            "d5d66ee3": {
+                "node_id": "d5d66ee3",
+                "name": "prefittedsoftvotingclassifier",
+                "status": "model"
+            },
+            "60ed4c5c": {
+                "node_id": "60ed4c5c",
+                "name": "DateTime",
+                "status": "dataType"
+            },
+            "89a293f9": {
+                "node_id": "89a293f9",
+                "name": "ModeCatImputer-StringCast-DateTimeTransformer",
+                "status": "operation"
+            },
+            "c3db73fb": {
+                "node_id": "c3db73fb",
+                "name": "CategoricalHash",
+                "status": "dataType"
+            },
+            "4374a12e": {
+                "node_id": "4374a12e",
+                "name": "StringCast-HashOneHotEncoder",
+                "status": "operation"
+            },
+            "d10e1aee": {
+                "node_id": "d10e1aee",
+                "name": "Ignore",
+                "status": "dataType"
+            },
+            "caf6270b": {
+                "node_id": "caf6270b",
+                "name": "Categorical",
+                "status": "dataType"
+            },
+            "e9b59adf": {
+                "node_id": "e9b59adf",
+                "name": "StringCast-CharGramCountVectorizer",
+                "status": "operation"
+            },
+            "2c29d84c": {
+                "node_id": "2c29d84c",
+                "name": "ModeCatImputer-StringCast-LabelEncoder",
+                "status": "operation"
+            }
+        },
+        "edges": [
+            {
+                "source_node_id": "eb90aa16",
+                "source_node_name": "data_source",
+                "source_name": "",
+                "target_name": "1 col",
+                "dst_node_id": "60ed4c5c",
+                "dst_node_name": "DateTime"
+            },
+            {
+                "source_node_id": "60ed4c5c",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "",
+                "dst_node_id": "89a293f9",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "89a293f9",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "10 col",
+                "dst_node_id": "d5d66ee3",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "eb90aa16",
+                "source_node_name": "data_source",
+                "source_name": "",
+                "target_name": "1 col",
+                "dst_node_id": "c3db73fb",
+                "dst_node_name": "CategoricalHash"
+            },
+            {
+                "source_node_id": "c3db73fb",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "",
+                "dst_node_id": "4374a12e",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "4374a12e",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "1024 col",
+                "dst_node_id": "d5d66ee3",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "eb90aa16",
+                "source_node_name": "data_source",
+                "source_name": "",
+                "target_name": "1 col",
+                "dst_node_id": "d10e1aee",
+                "dst_node_name": "Ignore"
+            },
+            {
+                "source_node_id": "eb90aa16",
+                "source_node_name": "data_source",
+                "source_name": "",
+                "target_name": "9 col",
+                "dst_node_id": "caf6270b",
+                "dst_node_name": "Categorical"
+            },
+            {
+                "source_node_id": "caf6270b",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "",
+                "dst_node_id": "e9b59adf",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "e9b59adf",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "6 col",
+                "dst_node_id": "d5d66ee3",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "caf6270b",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "",
+                "dst_node_id": "2c29d84c",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "2c29d84c",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "6 col",
+                "dst_node_id": "d5d66ee3",
+                "dst_node_name": ""
+            }
+        ],
+        "child_runs": [],
+        "datasource_nodes": {
+            "eb90aa16": {
+                "node_id": "eb90aa16",
+                "name": "data_source - 12 col"
+            }
+        }
+    }
+}
